@@ -1,0 +1,17 @@
+.weather {
+  border: 1px solid #0c235b;
+  margin: 20px;
+  padding: 20px;
+}
+.weather-info {
+  border-top: 1px solid #0c235b;
+  margin: 20px;
+  padding: 20px;
+}
+ul {
+  list-style-type: none;
+}
+form {
+  margin: 20px;
+  padding: 20px;
+}
