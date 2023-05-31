@@ -1,14 +1,14 @@
 .App {
-  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.App footer {
+  font-size: 11px;
 }
 
 .App-header {
-  background-color: #d2def7;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #234eba;
+  background-color: #a9c52f;
+  color: #2c5d63;
 }
