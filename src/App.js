@@ -6,6 +6,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
+          <h1>What's it like outside?</h1>
           <Weather />
         </header>
       </div>

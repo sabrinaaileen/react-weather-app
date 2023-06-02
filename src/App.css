@@ -3,12 +3,31 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
 }
 .App footer {
   font-size: 11px;
+  text-align: center;
+}
+.App footer a {
+  color: #2c5d63;
+}
+h1,
+h2,
+h3,
+h6 {
+  color: #2c5d63;
+  font-weight: bold;
 }
 
 .App-header {
-  background-color: #a9c52f;
-  color: #2c5d63;
+  background-color: #f1fff1;
+  padding-top: 20px;
+}
+h1 {
+  padding: 0px 10px 0px 10px;
+  margin: 0px 10px 0px 10px;
+}
+body {
+  background-color: #d3f6d1;
 }
