@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ActualDate from "./ActualDate";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -14,6 +15,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+      date: new Date(response.data.dt * 1000),
     });
     console.log(response.data);
     setReady(true);
@@ -39,6 +41,9 @@ export default function Weather(props) {
         <div className="weather-info">
           <h2>{info.city}</h2>
           <h6>{info.country}</h6>
+          <strong>
+            <ActualDate date={info.date} />
+          </strong>
           <p className="text-capitalize">{info.description}</p>
 
           <div className="row">
