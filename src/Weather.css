@@ -19,5 +19,20 @@ form {
 }
 .temperature {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 400;
+  top: -5px;
+}
+.unit {
+  font-size: 15px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -30px;
+}
+
+.Weather canvas {
+  margin-right: 10px;
+  display: inline-block;
 }
