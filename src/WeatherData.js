@@ -13,20 +13,22 @@ export default function WeatherData(props) {
         <ActualDate date={props.data.date} />
       </strong>
       <p className="text-capitalize">{props.data.description}</p>
+      <div className="clearfix">
+        <WeatherIcon code={props.data.icon} />
+
+        <WeatherTemperature celsius={props.data.temperature} />
+      </div>
 
       <div className="row">
         <div className="col-6">
-          <div className="clearfix">
-            <WeatherIcon code={props.data.icon} />
-
-            <WeatherTemperature celsius={props.data.temperature} />
-          </div>
+          <ul>
+            <li>It feels like {Math.round(props.data.feelsLike)}°C</li>
+          </ul>
         </div>
         <div className="col-6">
           <ul>
-            <li>precipatation: no value yet</li>
-            <li>humidity: {props.data.humidity}%</li>
-            <li>wind: {Math.round(props.data.wind)}km/h</li>
+            <li>The humidity is: {props.data.humidity}%</li>
+            <li>The wind speed is: {Math.round(props.data.wind)}km/h</li>
           </ul>
         </div>
       </div>

@@ -18,6 +18,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
+      feelsLike: response.data.main.feels_like,
     });
     console.log(response.data);
     setReady(true);
@@ -50,7 +51,7 @@ export default function Weather(props) {
               />
             </div>
             <div className="col-2">
-              <input type="submit" value="Search" className="btn btn-success" />
+              <input type="submit" value="Search" className="btn" />
             </div>
           </div>
         </form>
