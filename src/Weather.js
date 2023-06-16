@@ -22,7 +22,7 @@ export default function Weather(props) {
       feelsLike: response.data.main.feels_like,
       coordinates: response.data.coord,
     });
-    console.log(response.data);
+
     setReady(true);
   }
   function search() {

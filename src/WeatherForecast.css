@@ -7,3 +7,10 @@
 .WeatherForecast-temperature-max {
   font-weight: bold;
 }
+.WeatherForecast-day {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.WeatherForecast-temperature {
+  font-size: 12px;
+}
