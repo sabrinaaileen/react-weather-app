@@ -9,6 +9,31 @@ export default function Weather(props) {
   const [ready, setReady] = useState(false);
   const [info, setInfo] = useState({});
   const [city, setCity] = useState(props.defaultCity);
+
+  const getGeolocation = async () => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const { latitude, longitude } = position.coords;
+      getCurrentWeather(latitude, longitude);
+      getCurrentForecast(latitude, longitude);
+    });
+  };
+
+  function getCurrentWeather(lat, lon) {
+    const apiKey = `197ef3a642b76eef90e131866f74a0a0`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    axios.get(url).then(handleResponse);
+  }
+
+  function showCurrentForecast(response) {
+    console.log(response);
+  }
+
+  function getCurrentForecast(lat, lon) {
+    const apiKey = `197ef3a642b76eef90e131866f74a0a0`;
+    let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    axios.get(url).then(showCurrentForecast);
+  }
+
   function handleResponse(response) {
     setInfo({
       city: response.data.name,
@@ -43,7 +68,7 @@ export default function Weather(props) {
       <div className="Weather">
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-6">
+            <div className="col-7">
               <input
                 type="text"
                 placeholder="Enter a city"
@@ -52,8 +77,17 @@ export default function Weather(props) {
                 onChange={changeCity}
               />
             </div>
-            <div className="col-2">
+            <div className="col-3">
               <input type="submit" value="Search" className="btn" />
+            </div>
+            <div className="col-2">
+              <input
+                type="button"
+                value="📍"
+                className="btn current"
+                title="Get the weather for your current location!"
+                onClick={getGeolocation}
+              />
             </div>
           </div>
         </form>
