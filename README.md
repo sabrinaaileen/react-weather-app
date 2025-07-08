@@ -1,3 +1,63 @@
+# 🌦️ React Weather App
+
+This is a responsive weather app built with React.  
+Users can search for any city and get **real-time weather information**, including temperature, description, weather icon, and more.
+
+🌐 [Live Demo](https://tangerine-sable-09d836.netlify.app)
+
+---
+
+## ✨ Features
+
+- City-based **weather search**
+- Real-time weather data using a public API
+- Displays temperature, weather icon, and description
+- Responsive layout – works on mobile and desktop
+- Clean and minimal UI
+
+---
+
+## 🔧 Technologies Used
+
+- React.js  
+- HTML5  
+- CSS3  
+- JavaScript (ES6)  
+- SheCodes Weather API (or OpenWeatherMap, depending on version)  
+- Netlify (deployment)
+
+---
+
+## 🎯 Purpose
+
+This project was built during a SheCodes React workshop to **practice building components, handling API requests, and managing user input** in React.  
+It helped me understand the core principles of state, props, and side effects.
+
+---
+
+## 📚 What I Learned
+
+- Creating and structuring React components  
+- Fetching and displaying data from APIs  
+- Managing loading states and user input  
+- Deploying React apps with Netlify  
+- Styling with basic CSS
+
+---
+
+## 🙋‍♀️ About Me
+
+I’m Sabrina – an aspiring frontend developer with a background in acting.  
+This project is part of my ongoing learning journey into modern web development.  
+Check out more of my projects here:  
+🌍 [sabrina-aileen-hodapp.de](https://www.sabrina-aileen-hodapp.de)
+
+---
+
+Thanks for checking it out! ❄️☀️🌧️
+
+___
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
